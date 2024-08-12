@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.theme-preference {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-preference h5 {
+  margin: 0 2em 0 0;
+}
+
+.theme-toggle {
+  border-radius: 20px;
+  padding: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.theme-toggle > input {
+  margin: 0.3em;
+}
+
+.custom-radio-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-radio-btn .checkmark {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-radio-btn input {
+  display: none;
+}
+
+.custom-radio-btn input:checked + .checkmark {
+  opacity: 1;
+}
+
+.checkmark {
+  cursor: pointer;
+}
+
+
+.theme-number {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+
+.theme-number ol {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol li {
+  padding: 6px;
+}
+
+.claculator-grid {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: minmax(200px, 300px);
+  grid-template-rows: minmax(70px, auto) auto;
+}
+
+.keypad-grid {
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 50px);
+}
+
+.keypad-grid > button {
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .current-operand {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .claculator-grid {
+    grid-template-columns: 400px;
+  }
+
+  .theme-1 .keypad-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 18px;
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/theme.css" />
+    <link rel="stylesheet" href="style/color-1.css" id="theme-css" />
+    <script src="script/script.js" defer></script>
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator-flex">
+        <div class="calculator-header">
+          <div class="theme-number">
+            <ol>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ol>
+          </div>
+          <h2>CALCULATOR</h2>
+          <div class="theme-preference">
+            <h5>THEME</h5>
+            <div class="theme-toggle">
+              <label class="custom-radio-btn">
+                <input id="first" name="toggle-state" type="radio" checked />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="custom-radio-btn">
+                <input id="second" name="toggle-state" type="radio" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="custom-radio-btn">
+                <input id="third" name="toggle-state" type="radio" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="claculator-grid">
+          <div class="output">
+            <div id="operation"></div>
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+          </div>
+
+          <div class="keypad-grid">
+            <button data-memory class="background-blue">MC</button>
+
+            <button data-memory class="background-blue">MR</button>
+
+            <button data-memory class="background-blue">M+</button>
+
+            <button data-memory class="background-blue">M-</button>
+            <button data-number>7</button>
+
+            <button data-number>8</button>
+
+            <button data-number>9</button>
+            
+            <button data-delete class="background-blue">DEL</button>
+
+            <button data-number>4</button>
+
+            <button data-number>5</button>
+
+            <button data-number>6</button>
+
+            <button data-operation>+</button>
+
+            <button data-number>1</button>
+
+            <button data-number>2</button>
+
+            <button data-number>3</button>
+
+            <button data-operation>-</button>
+
+            <button data-number>.</button>
+
+            <button data-number>0</button>
+
+            <button data-operation>/</button>
+
+            <button data-operation>x</button>
+
+            <button data-reset class="span-two background-blue">RESET</button>
+
+            <button data-equals class="span-two background-red">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
